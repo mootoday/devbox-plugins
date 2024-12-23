@@ -1,0 +1,10 @@
+{
+  "name": "devbox-plugins-common",
+  "version": "0.0.1",
+  "description": "",
+  "shell": {
+    "init_hook": [
+      "echo \"devbox.json\ndevbox.lock\n\" | while read line; do grep -qxF \"$line\" .git/info/exclude || echo \"$line\" >> .git/info/exclude; done"
+    ]
+  }
+}

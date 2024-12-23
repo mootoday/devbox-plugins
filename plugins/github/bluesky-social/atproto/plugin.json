@@ -1,0 +1,15 @@
+{
+  "name": "bluesky-social--atproto",
+  "version": "0.0.1",
+  "description": "",
+  "packages": ["nodejs@18", "jq@latest"],
+  "include": [
+    "github:mootoday/devbox-plugins/refs/heads/main?dir=plugins/common"
+  ],
+  "env": {
+    "DEVBOX_COREPACK_ENABLED": "true"
+  },
+  "create_files": {
+    "{{ .Virtenv }}/process-compose.yaml": "./process-compose.yaml"
+  }
+}
